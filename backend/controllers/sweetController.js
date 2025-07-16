@@ -41,3 +41,13 @@ exports.purchaseSweet = async(req, res) => {
         res.status(500).json({ message: "Something went wrong" });
     }
 };
+
+// Restock Sweet
+exports.restockSweet = async(req, res) => {
+    const { id } = req.params;
+    const { quantity } = req.body;
+    const sweet = await Sweet.findById(id);
+    sweet.quantity += quantity;
+    await sweet.save();
+    res.json(sweet);
+};
