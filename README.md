@@ -81,3 +81,11 @@ DELETE	/:id	Delete a sweet
 PUT	/purchase/:id	Purchase (reduce stock)
 
 PUT	/restock/:id	Restock (increase stock)
+
+## 📌 Screenshots
+
+<img width="1888" height="929" alt="image" src="https://github.com/user-attachments/assets/e9157bc1-a023-4483-9ca7-07753d7194e7" />
+
+<img width="1766" height="723" alt="image" src="https://github.com/user-attachments/assets/ac654289-7052-4b30-a82e-b050af538468" />
+
+
