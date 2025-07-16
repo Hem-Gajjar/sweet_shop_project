@@ -11,6 +11,6 @@ const {
 router.post('/', addSweet);
 router.get('/', getSweets);
 router.delete('/:id', deleteSweet);
-
+router.put('/purchase/:id', purchaseSweet);
 
 module.exports = router;
