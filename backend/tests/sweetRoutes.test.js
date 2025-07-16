@@ -26,4 +26,11 @@ describe("Sweet Shop Management API", () => {
         expect(res.statusCode).toBe(201);
         expect(res.body.name).toBe("Kaju Katli");
     });
+    it("should get all sweets", async() => {
+        await Sweet.create({ name: "Gulab Jamun", category: "Milk", price: 10, quantity: 30 });
+        const res = await request(app).get("/api/sweets");
+        expect(res.statusCode).toBe(200);
+        expect(Array.isArray(res.body)).toBe(true);
+        expect(res.body.length).toBeGreaterThan(0);
+    });
 });
