@@ -48,6 +48,15 @@ describe("Sweet Shop Management API", () => {
         expect(res.statusCode).toBe(200);
         expect(res.body.quantity).toBe(3);
     });
+    it("should fail purchase if quantity is insufficient", async() => {
+        const sweet = await Sweet.create({ name: "Peda", category: "Milk", price: 15, quantity: 5 });
+        const res = await request(app)
+            .put(`/api/sweets/purchase/${sweet._id}`)
+            .send({ quantity: 10 });
+
+        expect(res.statusCode).toBe(400);
+        expect(res.body.message).toMatch(/insufficient/i);
+    });
     it("should restock a sweet and increase quantity", async() => {
         const sweet = await Sweet.create({ name: "Halwa", category: "Veg", price: 30, quantity: 5 });
         const res = await request(app)
