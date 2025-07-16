@@ -9,6 +9,6 @@ const {
 } = require('../controllers/sweetController');
 
 router.post('/', addSweet);
-
+router.get('/', getSweets);
 
 module.exports = router;
