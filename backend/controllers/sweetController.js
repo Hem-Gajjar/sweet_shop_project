@@ -12,3 +12,10 @@ exports.getSweets = async(req, res) => {
     const sweets = await Sweet.find();
     res.json(sweets);
 };
+
+// Delete Sweet
+exports.deleteSweet = async(req, res) => {
+    const { id } = req.params;
+    await Sweet.findByIdAndDelete(id);
+    res.json({ message: 'Sweet deleted' });
+};
