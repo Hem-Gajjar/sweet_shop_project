@@ -39,4 +39,13 @@ describe("Sweet Shop Management API", () => {
         expect(res.statusCode).toBe(200);
         expect(res.body.message).toBe("Sweet deleted");
     });
+    it("should purchase a sweet and reduce quantity", async() => {
+        const sweet = await Sweet.create({ name: "Ladoo", category: "Round", price: 5, quantity: 10 });
+        const res = await request(app)
+            .put(`/api/sweets/purchase/${sweet._id}`)
+            .send({ quantity: 3 });
+
+        expect(res.statusCode).toBe(200);
+        expect(res.body.quantity).toBe(3);
+    });
 });
