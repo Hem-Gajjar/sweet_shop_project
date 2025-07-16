@@ -33,4 +33,10 @@ describe("Sweet Shop Management API", () => {
         expect(Array.isArray(res.body)).toBe(true);
         expect(res.body.length).toBeGreaterThan(0);
     });
+    it("should delete a sweet by id", async() => {
+        const sweet = await Sweet.create({ name: "Barfi", category: "Milk", price: 25, quantity: 15 });
+        const res = await request(app).delete(`/api/sweets/${sweet._id}`);
+        expect(res.statusCode).toBe(200);
+        expect(res.body.message).toBe("Sweet deleted");
+    });
 });
