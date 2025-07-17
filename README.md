@@ -70,8 +70,8 @@ Now your full-stack **Sweet Shop Management System** should be up and running lo
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/Hem-Gajjar/sweet_shop_management.git
-cd sweet_shop_management
+git clone https://github.com/Hem-Gajjar/sweet_shop_project.git
+cd sweet_shop_project
 ### 2️⃣ Set Up Backend
 
 cd backend
