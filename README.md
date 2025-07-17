@@ -22,6 +22,50 @@ A simple full-stack application for managing sweets inventory, built with the ME
 - **Version Control:** Git + GitHub
 
 ---
+## 🚀 How to Run the Project
+
+Make sure you have **Node.js** (v18 or later), **npm**, and **MongoDB** installed on your system.
+
+### 🔧 Backend Setup
+
+```bash
+# Navigate to the backend folder
+cd backend
+
+# Install backend dependencies
+npm install
+
+# Start the backend server
+npm start
+```
+
+> The backend will run on: `http://localhost:5000`
+
+### 🎨 Frontend Setup
+
+```bash
+# Open a new terminal and navigate to the frontend folder
+cd frontend
+
+# Install frontend dependencies
+npm install
+
+# Start the React development server
+npm start
+```
+
+> The frontend will run on: `http://localhost:3000`
+
+### 📁 Project Structure
+
+```
+project-root/
+├── backend/         # Express.js backend server
+├── frontend/        # React.js frontend application
+└── README.md
+```
+
+Now your full-stack **Sweet Shop Management System** should be up and running locally. 🍬🍭
 
 ## 🚀 Getting Started
 
